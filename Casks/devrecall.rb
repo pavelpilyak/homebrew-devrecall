@@ -16,12 +16,12 @@ cask "devrecall" do
   homepage "https://devrecall.dev"
 
   depends_on macos: ">= :monterey"
+  depends_on formula: "pavelpilyak/devrecall/devrecall-cli"
 
   app "DevRecall.app"
-  binary "DevRecall.app/Contents/Resources/devrecall", target: "devrecall"
 
   postflight do
-    system_command "#{appdir}/DevRecall.app/Contents/Resources/devrecall",
+    system_command "#{HOMEBREW_PREFIX}/bin/devrecall",
                    args: ["daemon", "install"]
   end
 
