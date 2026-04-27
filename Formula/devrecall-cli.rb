@@ -7,22 +7,22 @@ class DevrecallCli < Formula
   on_macos do
     on_arm do
       url "https://github.com/pavelpilyak/devrecall/releases/download/v#{version}/devrecall-darwin-aarch64.tar.gz"
-      sha256 "298b325005d35165b1d29e9a9c557cdee4f9f4eba2acf81b513989da728e1d9e"
+      sha256 "0e69f18674331ee256a5649f8f73c9cbe424765bde2b4b2731dcfe714fae3270"
     end
     on_intel do
       url "https://github.com/pavelpilyak/devrecall/releases/download/v#{version}/devrecall-darwin-x86_64.tar.gz"
-      sha256 "30af6f3a54f995140df1e3bf1bd841304e62268ce372a4e74326612268434ca1"
+      sha256 "544c5a6f2cfe6c190292290cced501dbc693522dcb59fcd66f44ef1531f3f5cb"
     end
   end
 
   on_linux do
     on_arm do
       url "https://github.com/pavelpilyak/devrecall/releases/download/v#{version}/devrecall-linux-aarch64.tar.gz"
-      sha256 "ea95274a6ae4494ae412151f15327f0df662ef92c4bf219eb09db582bd66b94b"
+      sha256 "620ba86d3c2e94aeafcb395781ac4880fc99ebbfa83adc468497cd0be3348d69"
     end
     on_intel do
       url "https://github.com/pavelpilyak/devrecall/releases/download/v#{version}/devrecall-linux-x86_64.tar.gz"
-      sha256 "33e59e2811d584565caca2d35fac9dece95c723b31454ab630e64a5c8bdda4db"
+      sha256 "558c69697de18ea99168ac1aa390beacbca60620c7565d220d8494e305b1a322"
     end
   end
 
