@@ -4,15 +4,11 @@ cask "devrecall" do
   on_arm do
     url "https://github.com/pavelpilyak/devrecall/releases/download/v#{version}/DevRecall-aarch64.dmg"
     sha256 "a4ae60a078375ebfee4bf53c2f1577b363e80ad25d6ea670a8947f798fbd6f8d"
-    binary "#{appdir}/DevRecall.app/Contents/MacOS/devrecall-aarch64-apple-darwin",
-           target: "devrecall"
   end
 
   on_intel do
     url "https://github.com/pavelpilyak/devrecall/releases/download/v#{version}/DevRecall-x86_64.dmg"
     sha256 "49f19a5629fc075c76f4c54d3984b6d969f31fc049bbcd3e55a6822ab5cedc2f"
-    binary "#{appdir}/DevRecall.app/Contents/MacOS/devrecall-x86_64-apple-darwin",
-           target: "devrecall"
   end
 
   name "DevRecall"
@@ -22,6 +18,7 @@ cask "devrecall" do
   depends_on macos: ">= :monterey"
 
   app "DevRecall.app"
+  binary "#{appdir}/DevRecall.app/Contents/MacOS/devrecall"
 
   postflight do
     system_command "#{HOMEBREW_PREFIX}/bin/devrecall",
