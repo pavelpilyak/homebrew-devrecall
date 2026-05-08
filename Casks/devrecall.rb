@@ -1,16 +1,16 @@
 cask "devrecall" do
-  version "0.1.6"
+  version "0.1.7"
 
   on_arm do
     url "https://github.com/pavelpilyak/devrecall/releases/download/v#{version}/DevRecall-aarch64.dmg"
-    sha256 "3748ca7222e370a16a4269d326e4927940d1df168bdcb35f840a7afe0cec98b9"
+    sha256 "a4ae60a078375ebfee4bf53c2f1577b363e80ad25d6ea670a8947f798fbd6f8d"
     binary "#{appdir}/DevRecall.app/Contents/MacOS/devrecall-aarch64-apple-darwin",
            target: "devrecall"
   end
 
   on_intel do
     url "https://github.com/pavelpilyak/devrecall/releases/download/v#{version}/DevRecall-x86_64.dmg"
-    sha256 "d5c0ccc8b126c8f3f5678d5ae3d69bf1d27c813023adccc78d12192ccfe1402d"
+    sha256 "49f19a5629fc075c76f4c54d3984b6d969f31fc049bbcd3e55a6822ab5cedc2f"
     binary "#{appdir}/DevRecall.app/Contents/MacOS/devrecall-x86_64-apple-darwin",
            target: "devrecall"
   end
