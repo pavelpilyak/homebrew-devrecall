@@ -21,7 +21,16 @@ cask "devrecall" do
   binary "#{appdir}/DevRecall.app/Contents/MacOS/devrecall"
 
   postflight do
-    system_command "#{HOMEBREW_PREFIX}/bin/devrecall",
+    # Kill any running `devrecall serve` so the desktop app respawns under the
+    # newly bundled binary on next launch. Without this, the old daemon
+    # process keeps serving the previous version's API.
+    system_command "/usr/bin/pkill",
+                   args:         ["-f", "devrecall serve"],
+                   must_succeed: false
+    # Invoke the bundled binary directly. Don't trust `#{HOMEBREW_PREFIX}/bin/devrecall`
+    # — if a stale devrecall-cli formula is installed, that symlink still
+    # points at its old binary, and we'd run the wrong `daemon install`.
+    system_command "#{appdir}/DevRecall.app/Contents/MacOS/devrecall",
                    args: ["daemon", "install"]
   end
 
