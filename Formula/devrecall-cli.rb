@@ -1,28 +1,28 @@
 class DevrecallCli < Formula
   desc "On-device developer activity aggregator (CLI only)"
   homepage "https://devrecall.dev"
-  version "0.1.15"
+  version "0.1.16"
   license "MIT"
 
   on_macos do
     on_arm do
       url "https://github.com/pavelpilyak/devrecall/releases/download/v#{version}/devrecall-darwin-aarch64.tar.gz"
-      sha256 "ef6825534a07091306c8d30e2923e3fc5ebb2e4e2bfcca0aa8a42a207f319f34"
+      sha256 "194699ec212f3b5748abf32d45b4189eec093cfc0415ac6e7f0b7756a4747a5c"
     end
     on_intel do
       url "https://github.com/pavelpilyak/devrecall/releases/download/v#{version}/devrecall-darwin-x86_64.tar.gz"
-      sha256 "4d90624e7fb8083b84371bb02c7ac691585f4d38bb38efaf2705584e2cd9ed03"
+      sha256 "d147b12a094852c86464b15ef0336d67b07e7a8abb7a954cdf35491a863fdead"
     end
   end
 
   on_linux do
     on_arm do
       url "https://github.com/pavelpilyak/devrecall/releases/download/v#{version}/devrecall-linux-aarch64.tar.gz"
-      sha256 "79597aed5e34fc81c2ba25422316e70c6077c331d22b39d830a7a1c378c7cfc5"
+      sha256 "259c3414344c8bb5dea9a719c109f2fb79457d9f66154afabebed34175f134f6"
     end
     on_intel do
       url "https://github.com/pavelpilyak/devrecall/releases/download/v#{version}/devrecall-linux-x86_64.tar.gz"
-      sha256 "35ed7ca2989d6e08de087897889479489800653e92a3752b403b5d7e742ef2ce"
+      sha256 "3dbe2ed97c5614b62c39c07170f074f46241f86e6b851c158578808368e7e722"
     end
   end
 
