@@ -1,14 +1,14 @@
 cask "devrecall" do
-  version "0.1.18"
+  version "0.1.19"
 
   on_arm do
     url "https://github.com/pavelpilyak/devrecall/releases/download/v#{version}/DevRecall-aarch64.dmg"
-    sha256 "23739380846a47711072984ceb7b367d3cf740428126453974ab68032d7395f3"
+    sha256 "7a62d400418d1b9fc0619ae85b5861e208de0949b6e9fd6e141738e7845913de"
   end
 
   on_intel do
     url "https://github.com/pavelpilyak/devrecall/releases/download/v#{version}/DevRecall-x86_64.dmg"
-    sha256 "603eba59179362b5be77bf940c055dd0f92fc116bfbfe72d01304dd8d2108fa0"
+    sha256 "d1f0f9b9dbe4757abd831ee9fd3b2ab85e2b93e2565a0021e5f9af7659a6f7e3"
   end
 
   name "DevRecall"
