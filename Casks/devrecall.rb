@@ -15,7 +15,7 @@ cask "devrecall" do
   desc "On-device developer activity aggregator — standups, brag docs, and work memory"
   homepage "https://devrecall.dev"
 
-  depends_on macos: ">= :monterey"
+  depends_on macos: :monterey
 
   app "DevRecall.app"
   binary "#{appdir}/DevRecall.app/Contents/MacOS/devrecall"
